@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXj-pB-9FS">
+                    <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="516733200.22872102">
+                        <!--2017-05-17 17:00:00 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-1F-8pI">
+                    <rect key="frame" x="144.5" y="279" width="86" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="86" id="OfQ-H6-dMo"/>
+                    </constraints>
+                    <state key="normal" title="Закрыть"/>
+                    <connections>
+                        <action selector="closeBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hat-Yz-wYc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OXj-pB-9FS" secondAttribute="trailing" id="CEG-gN-AxU"/>
+                <constraint firstItem="KD3-1F-8pI" firstAttribute="top" secondItem="OXj-pB-9FS" secondAttribute="bottom" constant="43" id="U3W-4c-A6m"/>
+                <constraint firstItem="OXj-pB-9FS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Ytv-jf-78c"/>
+                <constraint firstItem="OXj-pB-9FS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hhb-YZ-4T0"/>
+                <constraint firstItem="KD3-1F-8pI" firstAttribute="centerX" secondItem="OXj-pB-9FS" secondAttribute="centerX" id="oVh-fT-eIO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="OXj-pB-9FS" id="lmg-KS-MXB"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="267"/>
+        </view>
+    </objects>
+</document>

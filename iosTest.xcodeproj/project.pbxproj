@@ -15,6 +15,10 @@
 		811F4B891ECD42B6005581E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811F4B871ECD42B6005581E0 /* LaunchScreen.storyboard */; };
 		811F4B941ECD42B6005581E0 /* iosTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4B931ECD42B6005581E0 /* iosTestTests.m */; };
 		811F4B9F1ECD42B6005581E0 /* iosTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4B9E1ECD42B6005581E0 /* iosTestUITests.m */; };
+		811F4BAE1ECD95E5005581E0 /* CountriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4BAD1ECD95E5005581E0 /* CountriesListViewController.m */; };
+		811F4BB01ECD9601005581E0 /* list_of_countries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 811F4BAF1ECD9601005581E0 /* list_of_countries.csv */; };
+		811F4BC21ECDEDF7005581E0 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4BC11ECDEDF7005581E0 /* DatePickerView.m */; };
+		811F4BC41ECDEE0A005581E0 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811F4BC31ECDEE0A005581E0 /* DatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		811F4B9A1ECD42B6005581E0 /* iosTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		811F4B9E1ECD42B6005581E0 /* iosTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosTestUITests.m; sourceTree = "<group>"; };
 		811F4BA01ECD42B6005581E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		811F4BAC1ECD95E5005581E0 /* CountriesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesListViewController.h; sourceTree = "<group>"; };
+		811F4BAD1ECD95E5005581E0 /* CountriesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesListViewController.m; sourceTree = "<group>"; };
+		811F4BAF1ECD9601005581E0 /* list_of_countries.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = list_of_countries.csv; path = ../../../list_of_countries.csv; sourceTree = "<group>"; };
+		811F4BC01ECDEDF7005581E0 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		811F4BC11ECDEDF7005581E0 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		811F4BC31ECDEE0A005581E0 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +111,12 @@
 		811F4B781ECD42B6005581E0 /* iosTest */ = {
 			isa = PBXGroup;
 			children = (
+				811F4BB81ECDC6D5005581E0 /* CountriesList */,
+				811F4BB71ECDC6CD005581E0 /* ViewController */,
+				811F4BB61ECDC6AC005581E0 /* datePicker */,
+				811F4BAF1ECD9601005581E0 /* list_of_countries.csv */,
 				811F4B7C1ECD42B6005581E0 /* AppDelegate.h */,
 				811F4B7D1ECD42B6005581E0 /* AppDelegate.m */,
-				811F4B7F1ECD42B6005581E0 /* ViewController.h */,
-				811F4B801ECD42B6005581E0 /* ViewController.m */,
 				811F4B821ECD42B6005581E0 /* Main.storyboard */,
 				811F4B851ECD42B6005581E0 /* Assets.xcassets */,
 				811F4B871ECD42B6005581E0 /* LaunchScreen.storyboard */,
@@ -138,6 +150,34 @@
 				811F4BA01ECD42B6005581E0 /* Info.plist */,
 			);
 			path = iosTestUITests;
+			sourceTree = "<group>";
+		};
+		811F4BB61ECDC6AC005581E0 /* datePicker */ = {
+			isa = PBXGroup;
+			children = (
+				811F4BC01ECDEDF7005581E0 /* DatePickerView.h */,
+				811F4BC11ECDEDF7005581E0 /* DatePickerView.m */,
+				811F4BC31ECDEE0A005581E0 /* DatePickerView.xib */,
+			);
+			name = datePicker;
+			sourceTree = "<group>";
+		};
+		811F4BB71ECDC6CD005581E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				811F4B7F1ECD42B6005581E0 /* ViewController.h */,
+				811F4B801ECD42B6005581E0 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		811F4BB81ECDC6D5005581E0 /* CountriesList */ = {
+			isa = PBXGroup;
+			children = (
+				811F4BAC1ECD95E5005581E0 /* CountriesListViewController.h */,
+				811F4BAD1ECD95E5005581E0 /* CountriesListViewController.m */,
+			);
+			name = CountriesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +288,8 @@
 			files = (
 				811F4B891ECD42B6005581E0 /* LaunchScreen.storyboard in Resources */,
 				811F4B861ECD42B6005581E0 /* Assets.xcassets in Resources */,
+				811F4BB01ECD9601005581E0 /* list_of_countries.csv in Resources */,
+				811F4BC41ECDEE0A005581E0 /* DatePickerView.xib in Resources */,
 				811F4B841ECD42B6005581E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811F4BC21ECDEDF7005581E0 /* DatePickerView.m in Sources */,
 				811F4B811ECD42B6005581E0 /* ViewController.m in Sources */,
 				811F4B7E1ECD42B6005581E0 /* AppDelegate.m in Sources */,
 				811F4B7B1ECD42B6005581E0 /* main.m in Sources */,
+				811F4BAE1ECD95E5005581E0 /* CountriesListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
