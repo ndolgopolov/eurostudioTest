@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *checkBox;
 @property (weak, nonatomic) IBOutlet UIButton *regBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *isCorrectPass;
+@property (weak, nonatomic) IBOutlet UILabel *isValidEmail;
 
 @end
 

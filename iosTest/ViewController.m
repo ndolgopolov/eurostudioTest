@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self.titleView borde]
+
     _titleView.layer.borderColor = [UIColor blackColor].CGColor;
     _titleView.layer.borderWidth = 3.0;
     
@@ -106,11 +106,10 @@
 
     BOOL isFilled = YES;
     if (![_loginField.text length]) isFilled = NO;
-    if (![_passwordField.text length]) isFilled = NO;
-    if (![_confirmPassField.text length]) isFilled = NO;
+    if (![self checkConfirmPass]) isFilled = NO;
     if (![_birthdayField.text length]) isFilled = NO;
     if (![_countryField.text length]) isFilled = NO;
-    if (![_mailField.text length]) isFilled = NO;
+    if (![self checkValidEmail]) isFilled = NO;
     if (!checkLicence) isFilled = NO;
     
     if (isFilled) {
@@ -122,5 +121,49 @@
     
     }
     
+}
+
+- (BOOL)checkConfirmPass{
+
+    if ((![_passwordField.text length])||(![_confirmPassField.text length])) {
+        [_isCorrectPass setText:@""];
+        return NO;
+    }
+    
+    if ([_passwordField.text isEqualToString:_confirmPassField.text]) {
+        
+        [_isCorrectPass setText:@"Пароль и подтверждение совпадают"];
+        [_isCorrectPass setTextColor:[UIColor greenColor]];
+        return YES;
+        
+    } else {
+    
+        [_isCorrectPass setText:@"Пароль и подтверждение не совпадают"];
+        [_isCorrectPass setTextColor:[UIColor redColor]];
+        return NO;
+    
+    }
+
+    
+}
+
+- (BOOL)checkValidEmail{
+    
+    if (![_mailField.text length]){
+        [_isValidEmail setText:@""];
+        return NO;
+    }
+    
+    NSString *regexp = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *checkMailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexp];
+    BOOL isValid = [checkMailPredicate evaluateWithObject:_mailField.text];
+
+    if (!isValid) {
+        [_isValidEmail setText:@"Некорректный e-mail"];
+    } else {
+        [_isValidEmail setText:@""];
+    }
+    
+    return isValid;
 }
 @end
