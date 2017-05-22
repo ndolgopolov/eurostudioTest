@@ -60,7 +60,7 @@
 {
     if(self.delegate&& [self.delegate respondsToSelector:@selector(selectedCountry:)]){
     
-       [self dismissViewControllerAnimated:YES completion:nil];
+       [self.navigationController popViewControllerAnimated:YES];
        [self.delegate selectedCountry:listArray[indexPath.row]];
     
     }

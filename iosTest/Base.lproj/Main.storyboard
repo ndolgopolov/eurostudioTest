@@ -229,7 +229,7 @@ finance system</string>
                         <outlet property="regBtn" destination="z4I-zT-t64" id="uYg-Fy-NL8"/>
                         <outlet property="titleLabel" destination="Qc5-m4-EUc" id="PcO-E7-LJl"/>
                         <outlet property="titleView" destination="kdu-Cq-syq" id="fy1-8k-4hx"/>
-                        <segue destination="hNz-6C-8Ai" kind="presentation" identifier="openList" id="lsF-aX-Jpn"/>
+                        <segue destination="hNz-6C-8Ai" kind="show" identifier="openList" id="lsF-aX-Jpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
